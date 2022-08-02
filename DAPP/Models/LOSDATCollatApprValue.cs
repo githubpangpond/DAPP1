@@ -1,11 +1,17 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DAPP.Models
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class LOSDATCollatApprValue : ControllerBase
+    public class LOSDATCollatApprValue
     {
+        [Key]
+        public long ValueD { get; set; }
+
+        [Required]
+        public long CollatID { get; set; }
+
+        public long ApprID { get; set; }
+
     }
 }
