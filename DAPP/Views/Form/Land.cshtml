@@ -9,11 +9,12 @@
 <form method="post">
 
   <h6 class="text-left fw-bold mt-5 mb-3">สถานที่ตั้ง</h6>
-  <div class="row mb-3 align-items-center, col-auto">
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
     <div class="col-2">
       <label class="col-form-label required" for="Province">จังหวัด</label>
     </div>
-    <div class="col-2">
+    <div class="col-3">
       <select class="form-control req" id="Province" name="Province" onchange="LoadDropDownList('SSDIST','District',this); DefaultProvinceOther('Province');"><option value="">โปรดเลือก...</option>
         <option value="50">เชียงใหม่</option>
         <option value="57">เชียงราย</option>
@@ -101,9 +102,84 @@
       <input class="form-control text-box single-line" id="ProvinceOther" maxlength="50" name="ProvinceOther" type="text" value="">
     </div>
   </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label required" for="District">อำเภอ/เขต</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control req" id="District" name="District" onchange="LoadDropDownList('SSSDIS','SubDistrict',this); DefaultDistrictOther('District');"><option selected="selected" value="">โปรดเลือก...</option>
+      </select>
+    </div>
+    
+    <div class="col-3">
+      <input class="form-control text-box single-line" id="DistrictOther" maxlength="50" name="DistrictOther" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label required" for="SubDistrict">ตำบล/แขวง</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control req" id="SubDistrict" name="SubDistrict" onchange="DefaultSubDistrictOther('SubDistrict');"><option selected="selected" value="">โปรดเลือก...</option>
+      </select>
+    </div>
+    <div class="col-3">
+      <input class="form-control text-box single-line" id="SubDistrictOther" maxlength="50" name="SubDistrictOther" type="text" value="">
+    </div>
+  </div>
+
   <h6 class="text-left fw-bold mt-5 mb-3">ข้อมูลหลักประกัน</h6>
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label required" for="DocumentNo">เลขที่โฉนด</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control req text-box single-line" data-val="true" data-val-required="เลขที่โฉนด จำเป็นต้องระบุ" id="DocumentNo" maxlength="40" name="DocumentNo" type="text" value="">
+    </div>
+    <div class="col-2">
+        <label class="control-label" for="AerialPhoto">ระวางรูปถ่ายทางอากาศชื่อ</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control  text-box single-line" id="AerialPhoto" maxlength="200" name="AerialPhoto" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label required" for="LandNo">เลขที่ดิน</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control req text-box single-line" data-val="true" data-val-required="เลขที่ดิน จำเป็นต้องระบุ" id="LandNo" maxlength="40" name="LandNo" type="text" value="">
+    </div>
+    <div class="col-2">
+        <label class="control-label" for="AerialPhotoNumber">หมายเลข</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control  text-box single-line" id="AerialPhotoNumber" maxlength="20" name="AerialPhotoNumber" type="text" value="">
+    </div>
+  </div>
+
+  
     
   <h6 class="text-left fw-bold mt-5 mb-3">ที่ดิน</h6>
-    
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label col-md-4 required" for="SubDistrict">ตำบล/แขวง</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control req" id="SubDistrict" name="SubDistrict" onchange="DefaultSubDistrictOther('SubDistrict');"><option selected="selected" value="">โปรดเลือก...</option>
+      </select>
+    </div>
+    <div class="col-3">
+      <input class="form-control text-box single-line" id="SubDistrictOther" maxlength="50" name="SubDistrictOther" type="text" value="">
+    </div>
+  </div>
 
 </form>
