@@ -1,0 +1,175 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{ViewData["Title"] = "ข้อมูลประเมินราคา";
+}
+<h6 class="text-center fw-bold mt-5 mb-3">
+    การประเมินโดยบริษัทประเมิน(ที่ดินและอาคาร)
+</h6>
+<form method="post">
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-1"></div>
+                      <div class="col-4">
+                        <label for="AreaOfCollatAssess" class="col-form-label">เนื้อที่ประเมินหลักประกัน(ตารางวา)</label>
+                      </div>
+                      <div class="col-6">
+                        <input type="text" id="AreaOfCollatAssess" class="form-control" aria-describedby="passwordHelpInline" readonly>
+                      </div>
+                    </div>
+                    <div class="row mb-3 align-items-center">
+                            <div class="col-1"></div>
+                      <div class="col-4">
+                        <label for="LandPriceAssess" class="col-form-label">ราคาประเมินที่ดินต่อตารางวา(บาท)</label>
+                      </div>
+                      <div class="col-6">
+                        <input type="text" id="LandPriceAssess" class="form-control" aria-describedby="passwordHelpInline">
+                     </div>
+                    </div>
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-1"></div>
+                      <div class="col-4">
+                        <label for="AVOfOrigBuilding" class="col-form-label">ราคาประเมินอาคารเดิม(บาท)</label>
+                      </div>
+                      <div class="col-6">
+                        <input type="text" id="AVOfOrigBuilding" class="form-control" aria-describedby="passwordHelpInline">
+                     </div>
+                     </div>
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-1"></div>
+                      <div class="col-4">
+                        <label for="PriceBuildingRevRepair" class="col-form-label">ราคาปลูกสร้าง/ต่อเติม/ซ่อมแซม(บาท)</label>
+                      </div>
+                      <div class="col-6">
+                        <input type="text" id="PriceBuildingRevRepair" class="form-control" aria-describedby="passwordHelpInline">
+                     </div>
+                     </div>
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-1"></div>
+                      <div class="col-4">
+                        <label for="TotPriceCollat" class="col-form-label">ราคารวมหลักประกัน(บาท)</label>
+                      </div>
+                      <div class="col-6">
+                        <input type="text" id="TotPriceCollat" class="form-control" aria-describedby="passwordHelpInline" readonly>
+                     </div>
+                     </div>
+                     <div class="row mb-3 align-items-center">
+                        <div class="col-1"></div>
+                      <div class="col-4">
+                        <label for="CollatPrice" class="col-form-label required">ราคารับเป็นหลักประกัน(บาท)</label>
+                      </div>
+                      <div class="col-6">
+                        <input type="text" id="CollatPrice" class="form-control" aria-describedby="passwordHelpInline">
+                     </div>
+                     </div>
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-1"></div>
+                      <div class="col-4">
+                        <label for="ApprCompCode" class="col-form-label">บริษัทประเมิน</label>
+                      </div>
+                      <div class="col-6">
+                        <input type="text" id="ApprCompCode" class="form-control" aria-describedby="passwordHelpInline" readonly>
+                     </div>
+                     </div>
+                     <div class="row mb-3 align-items-center">
+                         <div class="col-1"></div>
+                      <div class="col-4">
+                        <label for="DelayCause" class="col-form-label">สาเหตุงานล่าช้า</label>
+                      </div>
+                      <div class="col-6">
+                        @*<input type="text" id="DelayCause" class="form-control" aria-describedby="passwordHelpInline">*@
+                            <select class="form-control" id="DelayCause" name="DelayCause"><option value="">โปรดเลือก...</option>
+    <option value="01">กู้ปลูกสร้าง-อาคาร รอเอกสารเพิ่ม/แบบแปลน</option>
+    <option value="06">ตรวจสอบเอกสารสิทธิ์ และกรรมสิทธิ์หลักประกัน</option>
+    <option value="03">ตรวจสอบทางเข้า-ออก หลักประกัน</option>
+    <option value="13">ติดต่อลูกค้าไม่ได้</option>
+    <option value="05">รอบริษัทประเมินในพื้นที่สรุปราคากลาง</option>
+    <option value="10">รอลูกค้าชำระค่าประเมิน</option>
+    <option value="02">รออาคารแล้วเสร็จ100%</option>
+    <option value="15">ระยะทางไกลระหว่างสาขาของ ธ.และที่ตั้ง สนง.ของ บ.ปร.(ใช้เวลาเดินทางมาก)</option>
+    <option value="12">ลูกค้าเลื่อนนัดเข้าสำรวจ</option>
+    <option value="04">ลูกค้าแก้ไข / เปลี่ยนแปลง แบบแปลน</option>
+    <option value="09">ลูกค้าขอทบทวนราคา(สินเชื่อรายย่อย)</option>
+    <option value="08">ลูกค้าอุทธรณ์ / แก้ไขราคารับฯ ตามโครงการนำร่อง  / การอุทธรณ์ราคาประเมิน Pre-review</option>
+    <option value="07">สินเชื่อเปลี่ยนแปลงวัตถุประสงค์การกู้</option>
+    <option value="11">สินเชื่อแจ้งชะลอเรื่อง</option>
+    <option value="14">อื่นๆ ที่มีผลต่อทำให้ SLA เกิน 3 วันทำการ(ภัยธรรมชาติ,ไฟฟ้าดับ)</option>
+    </select>
+                     </div>
+                     </div>
+                     <div class="row mb-3 align-items-center">
+                         <div class="col-1"></div>
+                      <div class="col-4">
+                        <label for="Other" class="col-form-label">อื่นๆ</label>
+                      </div>
+                      <div class="col-6">
+                        <input type="text" id="Other" class="form-control" aria-describedby="passwordHelpInline">
+                     </div>
+                     </div>
+     <h6 class="text-center fw-bold mt-5 mb-3">
+        วันที่ดำเนินการ
+    </h6>
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-1"></div>
+                      <div class="col-4">
+                        <label for="DateReceive" class="col-form-label">วันที่รับงาน</label>
+                      </div>
+                      <div class="col-auto">
+                        <input type="date" id="DateReceive" class="form-control" aria-describedby="passwordHelpInline" readonly>
+                     </div>
+                     </div>
+                     <div class="row mb-3 align-items-center">
+                         <div class="col-1"></div>
+                      <div class="col-4">
+                        <label for="DateContact" class="col-form-label required">วันที่ติดต่อ</label>
+                      </div>
+                      <div class="col-auto">
+                        <input type="date" id="DateContact" class="form-control" aria-describedby="passwordHelpInline">
+                     </div>
+                     </div>
+                     <div class="row mb-3 align-items-center">
+                         <div class="col-1"></div>
+                      <div class="col-4">
+                        <label for="DateSurvey" class="col-form-label required">วันที่สำรวจ</label>
+                      </div>
+                      <div class="col-auto">
+                        <input type="date" id="DateSurvey" class="form-control" aria-describedby="passwordHelpInline">
+                     </div>
+                     </div>
+                     <div class="row mb-3 align-items-center">
+                         <div class="col-1"></div>
+                      <div class="col-4">
+                        <label for="DateAssess" class="col-form-label required">วันที่ประเมิน</label>
+                      </div>
+                      <div class="col-auto">
+                        <input type="date" id="DateAssess" class="form-control" aria-describedby="passwordHelpInline">
+                     </div>
+                     </div>
+                     <div class="row mb-3 align-items-center">
+                         <div class="col-1"></div>
+                      <div class="col-4">
+                        <label for="DateRequestEdit" class="col-form-label">วันที่บันทึก</label>
+                      </div>
+                      <div class="col-auto">
+                        <input type="date" id="DateRequestEdit" class="form-control" aria-describedby="passwordHelpInline" readonly>
+                     </div>
+                     </div>
+                     <div class="row mb-3 align-items-center">
+                         <div class="col-1"></div>
+                      <div class="col-4">
+                        <label for="DateRequest" class="col-form-label">วันที่ขอแก้ไข</label>
+                      </div>
+                      <div class="col-auto">
+                        <input type="date" id="DateRequest" class="form-control" aria-describedby="passwordHelpInline">
+                     </div>
+                     </div>
+                     <div class="row mb-3 align-items-center">
+                         <div class="col-1"></div>
+                      <div class="col-4">
+                        <label for="DateRecord" class="col-form-label">วันที่บันทึกการแก้ไข</label>
+                      </div>
+                      <div class="col-auto">
+                        <input type="date" id="DateRecord" class="form-control" aria-describedby="passwordHelpInline">
+                     </div>
+                     </div>
+                     <button class="btn btn-rose btn-fill btn-wd readonly-hide">Save</button>
+</form>

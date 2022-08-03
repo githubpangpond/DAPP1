@@ -1,0 +1,12 @@
+﻿ul li a {
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 60vh;
+    list-style-type: none;
+    text-decoration: none !important;
+    color: red !important;
+}

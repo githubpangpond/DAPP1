@@ -15,6 +15,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Workspace\PanG PonD\DAPP\DAPP
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Workspace/PanG PonD/DAPP/DAPP/Views/Form/House.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybVxIb3VzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Workspace/PanG PonD/DAPP/DAPP/Views/Form/Land.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybVxMYW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Workspace/PanG PonD/DAPP/DAPP/Views/Form/Price.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybVxQcmljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Workspace/PanG PonD/DAPP/DAPP/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 [D:/Workspace/PanG PonD/DAPP/DAPP/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Workspace/PanG PonD/DAPP/DAPP/Views/Form/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-na9w8s8hwc
 
 [D:/Workspace/PanG PonD/DAPP/DAPP/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s

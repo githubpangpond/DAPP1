@@ -1,0 +1,178 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{ViewData["Title"] = "ข้อมูลประเมินอาคาร";
+}
+<h6 class="text-left fw-bold mt-5 mb-3">
+    ข้อมูลหลักประกัน
+</h6>
+<form method="post">
+         <div class="row mb-3 align-items-center">
+         <div class="col-auto"></div>
+        <div class="col-2">
+        <label for="HouseNo" class="col-form-label required">บ้านเลขที่</label>
+         </div>
+          <div class="col-3">
+         <input type="text" id="HouseNo" class="form-control" aria-describedby="passwordHelpInline">
+         </div>
+         <div class="col-auto"></div>
+         <div class="col-2">
+        <label for="ConstDeedNo" class="col-form-label">ก่อสร้างบนโฉนดเลขที่</label>
+         </div>
+          <div class="col-3">
+         <input type="text" id="ConstDeedNo" class="form-control" aria-describedby="passwordHelpInline">
+         </div>
+         </div>
+         <div class="row mb-3 align-items-center">
+         <div class="col-auto"></div>
+        <div class="col-2">
+        <label for="CollatPrice" class="col-form-label">ตำแหน่งก่อสร้าง</label>
+         </div>
+          <div class="col-3">
+         @*<input type="text" id="CollatPrice" class="form-control" aria-describedby="passwordHelpInline">*@
+         <select class="form-control" id="ConstSite" name="ConstSite"><option value="">โปรดเลือก...</option>
+            <option value="01">ไม่รุกล้ำ</option>
+            <option value="02">รุกล้ำ</option>
+          </select>
+         </div>
+         <div class="col-auto"></div>
+         <div class="col-2">
+        <label for="SectionScaleEncr" class="col-form-label">ส่วน/ขนาดที่รุกล้ำ(ตารางเมตร)</label>
+         </div>
+          <div class="col-3">
+         <input type="text" id="SectionScaleEncr" class="form-control" aria-describedby="passwordHelpInline">
+         </div>
+         </div>
+         <div class="row">
+             <div class="col-auto"></div>
+             <div class="col-2">
+                <label for="CollatPrice" class="col-form-label">สภาพการก่อสร้าง</label>
+             </div>
+             <div class="col-1" style="width:50px;">
+                 <input class="form-check-input" style="width: 2rem; height: 2rem;" type="checkbox" id="ConstProgOriBuilding" aria-describedby="checked" onchange="constProgOnChange(event);">
+             </div>
+                 <div class="col-3">
+                    <label class="col-form-label">ก่อสร้างแล้วเสร็จ(อาคารเดิม)</label>
+                 </div>
+                  <div class="col-2">
+                    <input type="number" id="ConstProgOriBuildingPct" class="form-control col-md-4" min="0" max="100" onblur="checkPercent(this.value,this.id);" disabled required>
+                 </div>
+                 <div class="col-1 col-form-label"><h5>%</h5></div>
+         </div>
+         <div class="row">
+             <div class="col-auto"></div>
+             <div class="col-2"></div>
+             <div class="col-1" style="width:50px;">
+                 <input class="form-check-input" style="width: 2rem; height: 2rem;" type="checkbox" id="ConstProgExpand" aria-describedby="checked" onchange="constProgOnChange(event);">
+             </div>
+                 <div class="col-3">
+                    <label class="col-form-label">ก่อสร้างแล้วเสร็จ(ปลูกสร้าง/ต่อเติม)</label>
+                 </div>
+                  <div class="col-2">
+                    <input type="number" id="ConstProgExpandPct" class="form-control col-md-4" min="0" max="100" onblur="checkPercent(this.value,this.id);" disabled required>
+                 </div>
+                 <div class="col-1 col-form-label"><h5>%</h5></div>
+         </div>
+         <div class="row mb-3 align-items-center">
+         <div class="col-auto"></div>
+        <div class="col-2">
+        <label for="BuildingYr" class="col-form-label">อายุอาคาร(ปี)</label>
+         </div>
+          <div class="col-3">
+         <input type="text" id="BuildingYr" class="form-control" aria-describedby="passwordHelpInline">
+         </div>
+         <div class="col-auto"></div>
+         <div class="col-2">
+        <label for="ConstPermitDate" class="col-form-label">วันที่ใบอนุญาตก่อสร้างหมดอายุ</label>
+         </div>
+          <div class="col-3">
+         <input type="text" id="ConstPermitDate" class="form-control" aria-describedby="passwordHelpInline">
+         </div>
+         </div>
+         <div class="row mb-3 align-items-center">
+         <div class="col-auto"></div>
+        <div class="col-2">
+        <label for="CollatPrice" class="col-form-label required">ประเภทอาคาร</label>
+         </div>
+          <div class="col-3">
+         <select class="form-control req" id="BuildingType" name="BuildingType"><option value="">โปรดเลือก...</option>
+<option value="02">ไม้</option>
+<option value="01">ตึก</option>
+<option value="03">ตึกครึ่งไม้</option>
+</select>
+         </div>
+         <div class="col-auto"></div>
+         <div class="col-2">
+        <label for="SectionScaleEncr" class="col-form-label required">ลักษณะอาคาร</label>
+         </div>
+          <div class="col-3">
+         <select class="form-control req" id="BuildingModel" name="BuildingModel"><option value="">โปรดเลือก...</option>
+<option value="05">แฟลต</option>
+<option value="03">ทาวน์เฮ้าส์</option>
+<option value="01">บ้านเดี่ยว</option>
+<option value="02">บ้านแฝด</option>
+<option value="08">บ้านทรงไทย</option>
+<option value="06">ห้องชุด</option>
+<option value="07">อาคารชุด</option>
+<option value="04">อาคารพาณิชย์</option>
+<option value="99">อื่นๆ</option>
+</select>
+         </div>
+         </div>
+         <div class="row mb-3 align-items-center">
+         <div class="col-auto"></div>
+        <div class="col-2">
+        <label for="BuildingCond" class="col-form-label">รูปแบบอาคาร</label>
+         </div>
+          <div class="col-3">
+         <select class="form-control" id="BuildingCond" name="BuildingCond"><option value="">โปรดเลือก...</option>
+<option value="02">ดี</option>
+<option value="03">ดีมาก</option>
+<option value="01">ธรรมดา</option>
+</select>
+         </div>
+         </div>
+         <div class="row mb-3 align-items-center">
+         <div class="col-auto"></div>
+        <div class="col-2">
+        <label for="BuildingYr" class="col-form-label">จำนวนชั้น</label>
+         </div>
+          <div class="col-3">
+         <input type="text" id="BuildingYr" class="form-control" aria-describedby="passwordHelpInline">
+         </div>
+         <div class="col-auto"></div>
+         <div class="col-2">
+        <label for="ConstPermitDate" class="col-form-label">การใช้อยู่อาศัย</label>
+         </div>
+          <div class="col-3">
+         <input type="text" id="ConstPermitDate" class="form-control" aria-describedby="passwordHelpInline">
+         </div>
+         </div>
+         <button type="submit">Save</button>
+</form>
+
+@section Scripts {
+    <script>
+    const checkPercent = (val,id) => {
+        if (val>100) {
+            document.getElementById(id).value = 100;
+        }
+        else if (val < 0) {
+            document.getElementById(id).value = 0;
+        }
+    }
+    const constProgOnChange = (evt) => {
+        // To disable textbox based on check status
+        //   Check: Enable
+        //   Uncheck: Disable
+        var targetId = evt.target.id + "Pct"
+        var textbox = document.querySelector('#' + targetId)
+        if (evt.target.checked) {
+            textbox.removeAttribute("disabled")
+        } else {
+            textbox.setAttribute("disabled", true)
+            textbox.value = null
+        }
+     }
+    </script>
+}

@@ -135,3 +135,4 @@ D:\Workspace\PanG PonD\DAPP\DAPP\obj\Debug\net6.0\refint\DAPP.dll
 D:\Workspace\PanG PonD\DAPP\DAPP\obj\Debug\net6.0\DAPP.pdb
 D:\Workspace\PanG PonD\DAPP\DAPP\obj\Debug\net6.0\DAPP.genruntimeconfig.cache
 D:\Workspace\PanG PonD\DAPP\DAPP\obj\Debug\net6.0\ref\DAPP.dll
+D:\Workspace\PanG PonD\DAPP\DAPP\obj\Debug\net6.0\scopedcss\Views\Form\Index.cshtml.rz.scp.css
