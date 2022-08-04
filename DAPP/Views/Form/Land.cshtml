@@ -98,7 +98,7 @@
         <option value="34">อุบลราชธานี</option>
        </select>
     </div>
-    <div class="col-3">
+    <div class="col-5">
       <input class="form-control text-box single-line" id="ProvinceOther" maxlength="50" name="ProvinceOther" type="text" value="">
     </div>
   </div>
@@ -113,7 +113,7 @@
       </select>
     </div>
     
-    <div class="col-3">
+    <div class="col-5">
       <input class="form-control text-box single-line" id="DistrictOther" maxlength="50" name="DistrictOther" type="text" value="">
     </div>
   </div>
@@ -127,7 +127,7 @@
       <select class="form-control req" id="SubDistrict" name="SubDistrict" onchange="DefaultSubDistrictOther('SubDistrict');"><option selected="selected" value="">โปรดเลือก...</option>
       </select>
     </div>
-    <div class="col-3">
+    <div class="col-5">
       <input class="form-control text-box single-line" id="SubDistrictOther" maxlength="50" name="SubDistrictOther" type="text" value="">
     </div>
   </div>
@@ -165,21 +165,787 @@
     </div>
   </div>
 
-  
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-3"></div>
+    <div class="col-2">
+      <label class="control-label" for="AerialPhotoPageNumber">แผ่นที่</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control int text-box single-line" data-val="true" data-val-number="The field แผ่นที่ must be a number." id="AerialPhotoPageNumber" maxlength="5" name="AerialPhotoPageNumber" type="number" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-3"></div>
+    <div class="col-2">
+      <label class="control-label" for="RegisterNumber">ทะเบียนเลขที่</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control  text-box single-line" id="RegisterNumber" maxlength="30" name="RegisterNumber" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="BookNo">เล่มที่</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control text-box single-line" id="BookNo" maxlength="40" name="BookNo" type="text" value="">
+    </div>
+    <div class="col-2">
+      <label class="control-label" for="PageNo">หน้าที่</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control text-box single-line" id="PageNo" maxlength="40" name="PageNo" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="SurveySurface">หน้าสำรวจ</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control text-box single-line" id="SurveySurface" maxlength="40" name="SurveySurface" type="text" value="">
+    </div>
+    <div class="col-2">
+      <label class="control-label" for="Liable">ระวาง</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control text-box single-line" id="Liable" maxlength="40" name="Liable" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label required" for="LandSizeSqM">เนื้อที่ดิน(ตารางวา)</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control money req text-box single-line" data-val="true" data-val-number="The field เนื้อที่ดิน(ตารางวา) must be a number." id="LandSizeSqM" maxlength="20" name="LandSizeSqM" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="LandPosition">ตำแหน่งที่ดิน</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="LandPosition" name="LandPosition"><option value="">โปรดเลือก...</option>
+        <option value="02">ไม่ถูกต้อง</option>
+        <option value="01">ถูกต้อง</option>
+      </select>
+    </div>
+    <div class="col-2">
+      <label class="control-label" for="CheckBy">ตรวจจาก</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="CheckBy" name="CheckBy"><option value="">โปรดเลือก...</option>
+        <option value="01">แปลงคง</option>
+        <option value="02">ระวาง</option>
+        <option value="03">อื่นๆ</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-3"></div>
+    <div class="col-2">
+      <label class="control-label" for="Other">อื่นๆ</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control text-box single-line" id="Other" maxlength="100" name="Other" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label required" for="Street">ตั้งอยู่บนถนน</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control req text-box single-line" data-val="true" data-val-required="ตั้งอยู่บนถนน จำเป็นต้องระบุ" id="Street" maxlength="40" name="Street" type="text" value="">
+    </div>
+    <div class="col-2">
+      <label class="control-label" for="SplitEntry">แยกเข้าซอย</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control text-box single-line" id="SplitEntry" maxlength="40" name="SplitEntry" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="Distance">ระยะทาง(เมตร)</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control money text-box single-line" data-val="true" data-val-number="The field ระยะทาง(เมตร) must be a number." id="Distance" maxlength="20" name="Distance" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="LandCondition">สภาพที่ดิน</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="LandCondition" name="LandCondition"><option value="">โปรดเลือก...</option>
+        <option value="01">ถมแล้ว</option>
+        <option value="02">ยังไม่ถม</option>
+      </select>
+    </div>
+    <div class="col-2">
+      <label class="control-label" for="AvgLandReclamation">ระดับดิน(ซม.)</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control moneyneg text-box single-line" data-val="true" data-val-number="The field ระดับดิน(ซม.) must be a number." id="AvgLandReclamation" maxlength="20" name="AvgLandReclamation" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label required" for="PositionLatitude">ตำแหน่งพิกัดละติจูด</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control req text-box single-line" data-val="true" data-val-required="ตำแหน่งพิกัดละติจูด จำเป็นต้องระบุ" id="PositionLatitude" maxlength="40" name="PositionLatitude" type="text" value="">
+    </div>
+    <div class="col-2">
+      <label class="control-label required" for="PositionLongtitude">ตำแหน่งพิกัดลองติจูด</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control req text-box single-line" data-val="true" data-val-required="ตำแหน่งพิกัดลองติจูด จำเป็นต้องระบุ" id="PositionLongtitude" maxlength="40" name="PositionLongtitude" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="WithBuilding">สิ่งปลูกสร้าง</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control" id="WithBuilding" name="WithBuilding"><option value="">โปรดเลือก...</option>
+        <option value="02">ไม่มีสิ่งปลูกสร้าง</option>
+        <option value="01">มีสิ่งปลูกสร้าง</option>
+      </select>
+    </div>
+    <div class="col-2">
+      <label class="control-label" for="OtherLoan">กู้ประเภทอื่นๆ</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control" id="OtherLoan" name="OtherLoan"><option value="">โปรดเลือก...</option>
+        <option value="Y">ใช่</option>
+        <option value="N">ไม่ใช่</option>
+      </select>
+    </div>
+  </div>
     
   <h6 class="text-left fw-bold mt-5 mb-3">ที่ดิน</h6>
   <div class="row mb-3 align-items-center">
     <div class="col-auto"></div>
     <div class="col-2">
-      <label class="control-label col-md-4 required" for="SubDistrict">ตำบล/แขวง</label>
+      <label class="control-label" for="PondAreaPct">เนื้อที่บ่อน้ำ (ตารางวา)</label>
     </div>
     <div class="col-3">
-      <select class="form-control req" id="SubDistrict" name="SubDistrict" onchange="DefaultSubDistrictOther('SubDistrict');"><option selected="selected" value="">โปรดเลือก...</option>
-      </select>
+      <input class="form-control money text-box single-line" data-val="true" data-val-number="The field เนื้อที่บ่อน้ำ (ตารางวา) must be a number." id="PondAreaPct" maxlength="20" name="PondAreaPct" type="text" value="">
+    </div>
+    <div class="col-2">
+      <label class="control-label" for="PondDepthEstimation">ความลึกโดยประมาณ(เมตร)</label>
     </div>
     <div class="col-3">
-      <input class="form-control text-box single-line" id="SubDistrictOther" maxlength="50" name="SubDistrictOther" type="text" value="">
+      <input class="form-control money text-box single-line" data-val="true" data-val-number="The field ความลึกโดยประมาณ(เมตร) must be a number." id="PondDepthEstimation" maxlength="20" name="PondDepthEstimation" type="text" value="">
     </div>
   </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="RoadToLand">ถนนผ่านหน้าที่ดิน</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="RoadToLand" name="RoadToLand"><option value="">โปรดเลือก...</option>
+        <option value="02">ทางเดินเท้า</option>
+        <option value="01">ทางรถยนต์</option>
+      </select>
+    </div>
+    <div class="col-2">
+      <label class="control-label" for="RoadSurface">ลักษณะผิวจราจร</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="RoadSurface" name="RoadSurface"><option value="">โปรดเลือก...</option>
+        <option value="01">คอนกรีตเสริมเหล็ก</option>
+        <option value="03">ดิน</option>
+        <option value="04">ลาดยาง</option>
+        <option value="02">ลูกรัง/หินคลุก</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="RoadSurfaceWidth">ผิวจราจรกว้าง(เมตร)</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control money text-box single-line" data-val="true" data-val-number="The field ผิวจราจรกว้าง(เมตร) must be a number." id="RoadSurfaceWidth" maxlength="20" name="RoadSurfaceWidth" type="text" value="">
+    </div>
+    <div class="col-2">
+      <label class="control-label" for="PedestrianWay">เขตทาง(เมตร)</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control money text-box single-line" data-val="true" data-val-number="The field เขตทาง(เมตร) must be a number." id="PedestrianWay" maxlength="20" name="PedestrianWay" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="CarAccess">รถยนต์เข้า-ออก</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control" id="CarAccess" name="CarAccess"><option value="">โปรดเลือก...</option>
+        <option value="01">ได้</option>
+        <option value="02">ไม่ได้</option>
+      </select>
+    </div>
+    <div class="col-2">
+      <label class="control-label" for="EntranceExit">ทางเข้า-ออก</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="EntranceExit" name="EntranceExit"><option value="">โปรดเลือก...</option>
+        <option value="01">ไม่มีปัญหา</option>
+        <option value="02">มีปัญหา</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="EntranceExitCondition">ต้องมีการปรับปรุงสภาพทาง</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control text-box single-line" id="EntranceExitCondition" maxlength="200" name="EntranceExitCondition" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="Appraised">ประเมินราคา</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="Appraised" name="Appraised"><option value="">โปรดเลือก...</option>
+        <option value="02">ไม่ประเมินราคา</option>
+        <option value="01">ประเมินราคา</option>
+      </select>
+    </div>
+    <div class="col-2">
+      <label class="control-label" for="Allocation">ลักษณะที่ดิน</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="Allocation" name="Allocation"><option value="">โปรดเลือก...</option>
+        <option value="03">ไม่จัดสรร</option>
+        <option value="02">จัดสรรโครงการเก่า</option>
+        <option value="01">จัดสรรโครงการใหม่</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="AppraisedNote">หมายเหตุไม่ประเมินราคาเนื่องจาก</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control text-box single-line" id="AppraisedNote" maxlength="150" name="AppraisedNote" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="SpaceEncroached">เนื้อที่ถูกรุกล้ำ/ใช้เพื่อบุคคลอื่น(ตารางวา)</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control money text-box single-line" data-val="true" data-val-number="The field เนื้อที่ถูกรุกล้ำ/ใช้เพื่อบุคคลอื่น(ตารางวา) must be a number." id="SpaceEncroached" maxlength="20" name="SpaceEncroached" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+       <label class="control-label" for="PublicUtility">สาธารณูปโภค</label>
+    </div>
+    <div class="col-1">
+      <input class="form-check-input" id="cbPublicUtility03" name="cbPublicUtility03" style="width: 2rem; height: 2rem;" type="checkbox" value="true">
+    </div>
+    <div class="col-3">
+      <div class="col-form-label">ไฟฟ้าถนน</div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      <input class="form-check-input" id="cbPublicUtility01" name="cbPublicUtility01" style="width: 2rem; height: 2rem;" type="checkbox" value="true">
+    </div>
+    <div class="col-3">
+      <div class="col-form-label">ไฟฟ้าถาวร</div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      <input class="form-check-input" id="cbPublicUtility04" name="cbPublicUtility04" style="width: 2rem; height: 2rem;" type="checkbox" value="true">
+    </div>
+    <div class="col-3">
+      <div class="col-form-label">ท่อระบายน้ำ / บ่อพัก</div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      <input class="form-check-input" id="cbPublicUtility02" name="cbPublicUtility02" style="width: 2rem; height: 2rem;" type="checkbox" value="true">
+    </div>
+    <div class="col-3">
+      <div class="col-form-label">น้ำประปา / น้ำบาดาล</div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      <input class="form-check-input" id="cbPublicUtility05" name="cbPublicUtility05" style="width: 2rem; height: 2rem;" type="checkbox" value="true">
+    </div>
+    <div class="col-3">
+      <div class="col-form-label">อื่นๆ</div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="OtherUtility">สาธารณูปโภคอื่นๆ</label>
+    </div>
+    <div class="col-3">
+      <input class="form-control text-box single-line" id="OtherUtility" maxlength="150" name="OtherUtility" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+       <label class="control-label" for="ConstraintCondition">ข้อจำกัดเงื่อนไข</label>
+    </div>
+    <div class="col-1">
+      <input class="form-check-input" id="IsExpropriation" name="IsExpropriation" style="width: 2rem; height: 2rem;" type="checkbox" value="true">
+    </div>
+    <div class="col-3">
+      <div class="col-form-label">อยู่ในระวางเวนคืน</div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      <input class="form-check-input" id="InLineExpropriated" name="InLineExpropriated" style="width: 2rem; height: 2rem;" type="checkbox" value="true">
+    </div>
+    <div class="col-3">
+      <div class="col-form-label">อยู่ในแนวเวนคืน ตาม พรฎ/พรบ</div>
+    </div>
+    <div class="col-4">
+      <input class="form-control text-box single-line" id="RoyalDecreeAct" maxlength="40" name="RoyalDecreeAct" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      <input class="form-check-input" id="ElectricityOver100M" name="ElectricityOver100M" style="width: 2rem; height: 2rem;" type="checkbox" value="true">
+    </div>
+    <div class="col-3">
+      <div class="col-form-label">จุดสิ้นสุดสาธารณูปโภคไฟฟ้าถาวรอยู่ห่างหลักประกันไปตามแนวถนน/ซอย ระยะทางประมาณ เมตร(กรณีเกิน 100 เมตร)</div>
+    </div>
+    <div class="col-4">
+      <input class="form-control int text-box single-line" id="ElectricityOver100MNote" maxlength="7" name="ElectricityOver100MNote" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      <input class="form-check-input" id="LocatedForestAgriPark" name="LocatedForestAgriPark" style="width: 2rem; height: 2rem;" type="checkbox" value="true">
+    </div>
+    <div class="col-5">
+      <div class="col-form-label">อยู่ในเขตป่าฯ / อยู่ในเขต สปก. / อุทยานฯ</div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      <input class="form-check-input" id="CarNoAccess" name="CarNoAccess" style="width: 2rem; height: 2rem;" type="checkbox" value="true">
+    </div>
+    <div class="col-5">
+      <div class="col-form-label">รูปร่างลักษณะที่ดินหลักประกันไม่สามารถนำรถยนต์เข้าไปในที่ดินได้</div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      <input class="form-check-input" id="OtherCondition" name="OtherCondition" style="width: 2rem; height: 2rem;" type="checkbox" value="true">
+    </div>
+    <div class="col-3">
+      <div class="col-form-label">เงื่อนไขเพิ่มเติม</div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1"></div>
+    <div class="col-5">
+      <input class="form-control text-box single-line" id="OtherConditionNote" maxlength="500" name="OtherConditionNote" type="text" value="">
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="Club">สโมสร</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="Club" name="Club"><option value="">โปรดเลือก...</option>
+        <option value="1">มี</option>
+        <option value="2">ไม่มี</option>
+      </select>
+    </div>
+    <div class="col-2">
+      <label class="control-label" for="SecuritySystem">ระบบรักษาความปลอดภัย</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="SecuritySystem" name="SecuritySystem"><option value="">โปรดเลือก...</option>
+        <option value="1">มี</option>
+        <option value="2">ไม่มี</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="Stadium">สนามกีฬากลางแจ้ง</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="Stadium" name="Stadium"><option value="">โปรดเลือก...</option>
+        <option value="1">มี</option>
+        <option value="2">ไม่มี</option>
+      </select>
+    </div>
+    <div class="col-2">
+      <label class="control-label" for="KeyCardSystem">ระบบ Key card</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="KeyCardSystem" name="KeyCardSystem"><option value="">โปรดเลือก...</option>
+        <option value="1">มี</option>
+        <option value="2">ไม่มี</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="Kindergarden">โรงเรียนอนุบาล</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="Kindergarden" name="Kindergarden"><option value="">โปรดเลือก...</option>
+        <option value="1">มี</option>
+        <option value="2">ไม่มี</option>
+      </select>
+    </div>
+    <div class="col-2">
+      <label class="control-label" for="WasteDisposalSystem">ระบบการทิ้งและกำจัดขยะ</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="WasteDisposalSystem" name="WasteDisposalSystem"><option value="">โปรดเลือก...</option>
+        <option value="1">มี</option>
+        <option value="2">ไม่มี</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="AnyDevelopment">การพัฒนาในพื้นที่</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="AnyDevelopment" name="AnyDevelopment"><option value="">โปรดเลือก...</option>
+        <option value="04">มีการพัฒนาประเภทเกษตรกรรมเป็นส่วนใหญ่</option>
+        <option value="03">มีการพัฒนาประเภทที่อยู่อาศัยเป็นส่วนใหญ่</option>
+        <option value="01">มีการพัฒนาประเภทพานิชยกรรมเป็นส่วนใหญ่</option>
+        <option value="02">มีการพัฒนาประเภทพานิชยกรรมสลับที่อยู่อาศัย หรืออุตสาหกรรมเป็นส่วนใหญ่</option>
+        <option value="05">ยังไม่มีการพัฒนา ส่วนใหญ่เป็นที่รกร้างว่างเปล่า</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="TownPlanReq">ข้อกำหนดผังเมือง</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="TownPlanReq" name="TownPlanReq"><option value="">โปรดเลือก...</option>
+        <option value="04">ย่านที่อยู่อาศัยหนาแน่นน้อย</option>
+        <option value="03">ย่านที่อยู่อาศัยหนาแน่นปานกลาง</option>
+        <option value="02">ย่านที่อยู่อาศัยหนาแน่นมาก</option>
+        <option value="01">ย่านพานิชยกรรม</option>
+        <option value="05">อื่นๆ ที่ยาก/ มีข้อจำกัดต่อการพัฒนา</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="PhysicalReputation">ลักษณะทางกายภาพ/ รูปแปลง</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="PhysicalReputation" name="PhysicalReputation"><option value="">โปรดเลือก...</option>
+        <option value="03">รูปร่างกับเนื้อที่ดินไม่มีความเหมาะสมต่อการพัฒนาทำประโยชน์</option>
+        <option value="02">รูปร่างกับเนื้อที่ดินมีความเหมาะสมต่อการพัฒนาทำประโยชน์ปานกลาง</option>
+        <option value="01">รูปร่างกับเนื้อที่ดินมีความเหมาะสมต่อการพัฒนาทำประโยชน์มาก</option>
+      </select>
+    </div>
+    <div class="col-2">
+      <label class="control-label" for="Location">ตำแหน่งที่ตั้ง</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="Location" name="Location"><option value="">โปรดเลือก...</option>
+        <option value="05">แหล่งมลพิษ ไม่เป็นที่นิยม</option>
+        <option value="04">ติดซอยแยก ซอยตัน</option>
+        <option value="03">ติดถนนซอย ถนนเมนในโครงการ</option>
+        <option value="02">ติดถนนสายรอง</option>
+        <option value="01">ติดถนนสายหลัก</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      <label class="control-label" for="ProjReputation">ชื่อเสียงโครงการ (ผู้ประกอบการ)</label>
+    </div>
+    <div class="col-3">
+      <select class="form-control " id="ProjReputation" name="ProjReputation"><option value="">โปรดเลือก...</option>
+        <option value="01">เป็นที่รู้จักดีมาก</option>
+        <option value="03">เป็นที่รู้จักน้อย</option>
+        <option value="02">เป็นที่รู้จักปานกลาง</option>
+        <option value="04">ไม่มีเป็นที่รู้จัก</option>
+        <option value="05">ไม่ระบุ</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+       <label class="control-label" for="Environment">สภาพแวดล้อม</label>
+    </div>
+    <div class="col-1">
+      <input class="form-check-input" id="cbEnvironment05" name="cbEnvironment05" style="width: 2rem; height: 2rem;" type="checkbox" value="true">
+    </div>
+    <div class="col-5">
+      <div class="col-form-label">ที่ดินรกร้าง ว่างเปล่าห่างไกลชุมชน</div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      <input class="form-check-input" id="cbEnvironment08" name="cbEnvironment08" style="width: 2rem; height: 2rem;" type="checkbox" value="true">
+    </div>
+    <div class="col-3">
+      <div class="col-form-label">ย่านเกษตรกรรม</div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      <input class="form-check-input" id="cbEnvironment04" name="cbEnvironment04" style="width: 2rem; height: 2rem;" type="checkbox" value="true">
+    </div>
+    <div class="col-3">
+      <div class="col-form-label">ย่านที่อยู่อาศัยประปราย ชนบท</div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      <input class="form-check-input" id="cbEnvironment10" name="cbEnvironment10" style="width: 2rem; height: 2rem;" type="checkbox" value="true">
+    </div>
+    <div class="col-3">
+      <div class="col-form-label">ย่านที่อยู่อาศัยสลับพานิชยกรรม</div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      
+    </div>
+    <div class="col-3">
+      <div class="col-form-label"></div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      
+    </div>
+    <div class="col-3">
+      <div class="col-form-label"></div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      
+    </div>
+    <div class="col-3">
+      <div class="col-form-label"></div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      
+    </div>
+    <div class="col-3">
+      <div class="col-form-label"></div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      
+    </div>
+    <div class="col-3">
+      <div class="col-form-label"></div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      
+    </div>
+    <div class="col-3">
+      <div class="col-form-label"></div>
+    </div>
+  </div>
+
+  @*
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      
+    </div>
+    <div class="col-3">
+      
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      
+    </div>
+    <div class="col-3">
+      
+    </div>
+    <div class="col-2">
+      
+    </div>
+    <div class="col-3">
+      
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+      
+    </div>
+    <div class="col-3">
+      
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2">
+       
+    </div>
+    <div class="col-1">
+      
+    </div>
+    <div class="col-5">
+      <div class="col-form-label"></div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-auto"></div>
+    <div class="col-2"></div>
+    <div class="col-1">
+      
+    </div>
+    <div class="col-5">
+      <div class="col-form-label"></div>
+    </div>
+  </div>
+
+  class="form-check-input"
+  style="width: 2rem; height: 2rem;"
+  *@
 
 </form>
